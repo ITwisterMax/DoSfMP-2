@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinApp.Services;assembly=XamarinApp"
+             x:Class="XamarinApp.Views.ComputerDetailsPage"
+             BackgroundColor="#C8C8C8"
+             Title="{local:LanguageService ComputerDetailsTab}">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20,10,20,10">
+                <ImageButton x:Name="Image" 
+                             WidthRequest="100" 
+                             HeightRequest="100" 
+                             HorizontalOptions="FillAndExpand" 
+                             VerticalOptions="FillAndExpand" 
+                             Source="{Binding ImageUrl}"
+                             Command="{Binding ViewImage}"
+                             BackgroundColor="Transparent" />
+                <Button Text="{local:LanguageService UpdateImageButton}"
+                        Margin="0, 10, 0, 0"
+                        Command="{Binding UpdateImage}"
+                        TextColor="#C8C8C8"
+                        BackgroundColor="#9d182e" 
+                        CornerRadius="10" />
+                <Button Text="{local:LanguageService UpdateVideoButton}"
+                        Command="{Binding UpdateVideo}"
+                        TextColor="#C8C8C8"
+                        BackgroundColor="#9d182e" 
+                        CornerRadius="10" />
+                <Button Text="{local:LanguageService ViewVideoButton}"
+                        Command="{Binding ViewVideo}"
+                        TextColor="#C8C8C8"
+                        BackgroundColor="#9d182e" 
+                        CornerRadius="10" />
+                <Label Text="{local:LanguageService MainDataLabel}"  HorizontalOptions="Center" FontFamily="{local:FontFamilyService}" FontSize="{local:FontSizeService}" TextColor="#9d182e" FontAttributes="Bold" />
+                <StackLayout Orientation="Vertical">
+                    <Entry Text="{Binding Name}"
+                           Placeholder="{local:LanguageService NameLabel}"
+                           PlaceholderColor="#606060" HeightRequest="40"
+                           FontFamily="{local:FontFamilyService}"
+                           FontSize="{local:FontSizeService}"
+                           HorizontalOptions="FillAndExpand" 
+                           TextColor="#9d182e" />
+                    <Entry Text="{Binding Description}"
+                           Placeholder="{local:LanguageService DescriptionLabel}"
+                           PlaceholderColor="#606060" HeightRequest="40"
+                           FontFamily="{local:FontFamilyService}"
+                           FontSize="{local:FontSizeService}" 
+                           HorizontalOptions="FillAndExpand"
+                           TextColor="#9d182e" />
+                    <Entry Text="{Binding ProcessorGeneration}" 
+                           Placeholder="{local:LanguageService ProcessorGenerationLabel}"
+                           PlaceholderColor="#606060" HeightRequest="40"
+                           FontFamily="{local:FontFamilyService}"
+                           FontSize="{local:FontSizeService}"
+                           HorizontalOptions="FillAndExpand"
+                           TextColor="#9d182e" />
+                    <Entry Text="{Binding ProcessorCores}" 
+                           Placeholder="{local:LanguageService ProcessorCoresLabel}"
+                           PlaceholderColor="#606060" HeightRequest="40"
+                           FontFamily="{local:FontFamilyService}"
+                           FontSize="{local:FontSizeService}"
+                           HorizontalOptions="FillAndExpand"
+                           TextColor="#9d182e" />
+                    <Entry Text="{Binding ProcessorThreads}" 
+                           Placeholder="{local:LanguageService ProcessorThreadsLabel}"
+                           PlaceholderColor="#606060" HeightRequest="40"
+                           FontFamily="{local:FontFamilyService}"
+                           FontSize="{local:FontSizeService}"
+                           HorizontalOptions="FillAndExpand"
+                           TextColor="#9d182e" />
+                    <Entry Text="{Binding RamSize}"
+                           Placeholder="{local:LanguageService RamSizeLabel}"
+                           PlaceholderColor="#606060" HeightRequest="40"
+                           FontFamily="{local:FontFamilyService}"
+                           FontSize="{local:FontSizeService}"
+                           HorizontalOptions="FillAndExpand"
+                           TextColor="#9d182e" />
+                    <Entry Text="{Binding SsdSize}"
+                           Placeholder="{local:LanguageService SsdSizeLabel}"
+                           PlaceholderColor="#606060" HeightRequest="40"
+                           FontFamily="{local:FontFamilyService}" 
+                           FontSize="{local:FontSizeService}"
+                           HorizontalOptions="FillAndExpand"
+                           TextColor="#9d182e" />
+                    <Entry Text="{Binding HddSize}"
+                           Placeholder="{local:LanguageService HddSizeLabel}"
+                           PlaceholderColor="#606060" HeightRequest="40"
+                           FontFamily="{local:FontFamilyService}" 
+                           FontSize="{local:FontSizeService}"
+                           HorizontalOptions="FillAndExpand"
+                           TextColor="#9d182e" />
+                    <Entry Text="{Binding PsuPower}"
+                           Placeholder="{local:LanguageService PsuPowerLabel}"
+                           PlaceholderColor="#606060" HeightRequest="40"
+                           FontFamily="{local:FontFamilyService}" 
+                           FontSize="{local:FontSizeService}"
+                           HorizontalOptions="FillAndExpand"
+                           TextColor="#9d182e" />
+                    <Entry Text="{Binding Price}" 
+                           Placeholder="{local:LanguageService PriceLabel}"
+                           PlaceholderColor="#606060" HeightRequest="40"
+                           FontFamily="{local:FontFamilyService}" 
+                           FontSize="{local:FontSizeService}"
+                           HorizontalOptions="FillAndExpand"
+                           TextColor="#9d182e" />
+                </StackLayout>
+                <StackLayout Orientation="Vertical" Spacing="10">
+                    <Button Text="{local:LanguageService SaveChangesButton}" 
+                            HorizontalOptions="FillAndExpand"
+                            Command="{Binding Save}"
+                            TextColor="#C8C8C8"
+                            BackgroundColor="#9d182e" 
+                            CornerRadius="10" />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

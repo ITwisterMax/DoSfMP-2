@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:XamarinApp.ViewModels;assembly=XamarinApp"
+             xmlns:local="clr-namespace:XamarinApp.Services;assembly=XamarinApp"
+             x:DataType="viewModels:LoginViewModel"
+             mc:Ignorable="d"
+             x:Class="XamarinApp.Views.LoginPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#C8C8C8">
+    <ContentPage.Content>
+        <StackLayout Padding="20,0,20,0" VerticalOptions="Center">
+            <Label Text="{local:LanguageService SignInTitle}"
+                   Margin="0, 0, 0, 20"
+                   TextColor="#9d182e"
+                   FontSize="{local:FontSizeService}" 
+                   FontFamily="{local:FontFamilyService}"
+                   TextTransform="Uppercase"
+                   HorizontalTextAlignment="Center"
+                   FontAttributes="Bold" />
+            <Entry x:Name="Email" 
+                   Text="{Binding Email}"
+                   Placeholder="{local:LanguageService EmailPlaceholder}"  
+                   PlaceholderColor="#606060" HeightRequest="40"  
+                   Keyboard = "Email"  
+                   TextColor = "#9d182e"
+                   BackgroundColor="Transparent" 
+                   FontSize="{local:FontSizeService}" 
+                   FontFamily="{local:FontFamilyService}" />
+            <Entry x:Name="Password" 
+                   Text="{Binding Password}"
+                   Placeholder="{local:LanguageService PasswordPlaceholder}"    
+                   PlaceholderColor="#606060" HeightRequest="40"  
+                   IsPassword="True"  
+                   TextColor="#9d182e"
+                   BackgroundColor="Transparent" 
+                   FontSize="{local:FontSizeService}" 
+                   FontFamily="{local:FontFamilyService}" />
+            <Button Text="{local:LanguageService LoginButton}"
+                    Command="{Binding LoginCommand}"
+                    TextColor="#C8C8C8"  
+                    HorizontalOptions="FillAndExpand"  
+                    BackgroundColor="#9d182e" 
+                    CornerRadius="10"
+                    Margin="0, 10, 0 ,0"/>
+            <Button Text="{local:LanguageService RedirectToRegistrationPage}"
+                    Command="{Binding RedirectToRegistrationPage}"
+                    TextColor="#C8C8C8"
+                    HorizontalOptions="FillAndExpand"  
+                    BackgroundColor="#9d182e" 
+                    CornerRadius="10"
+                    Margin="0, 10, 0 ,0"/>
+            <ActivityIndicator IsRunning="True" IsVisible="{Binding IsBusy}" />
+            <Label Text="{local:LanguageService MadeByLabel}" 
+                   TextColor="#9d182e"
+                   HorizontalOptions="FillAndExpand" 
+                   VerticalOptions="StartAndExpand" 
+                   HorizontalTextAlignment="Center" 
+                   IsVisible="{Binding IsBusy}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

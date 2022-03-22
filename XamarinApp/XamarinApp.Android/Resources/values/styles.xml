@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+	<style name="MainTheme" parent="MainTheme.Base">
+		<item name="colorPrimary">#9d182e</item>
+		<item name="colorPrimaryDark">#C8C8C8</item>
+		<item name="colorAccent">#9d182e</item>
+	</style>
+	<style name="CustomTheme.Launch" parent="Theme.AppCompat.Light.NoActionBar">
+		<item name="android:windowBackground">@drawable/launcher_background</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowFullscreen">true</item>
+		<item name="android:windowContentOverlay">@null</item>
+		<item name="android:windowActionBar">true</item>
+	</style>
+</resources>

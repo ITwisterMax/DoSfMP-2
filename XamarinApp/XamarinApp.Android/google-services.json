@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "611600690866",
+    "firebase_url": "https://xamarinfirebase-56915-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "xamarinfirebase-56915",
+    "storage_bucket": "xamarinfirebase-56915.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:611600690866:android:660b865cabb1cb56d9a3ab",
+        "android_client_info": {
+          "package_name": "com.bsuir.xamarinfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "611600690866-cl621158jvi24gb65rco4rh7402rhjra.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiO9Edo9gCawnw8H6lBu6gNfBOfFVx2Kc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "611600690866-cl621158jvi24gb65rco4rh7402rhjra.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

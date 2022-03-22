@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinApp.Views.FilterPage"
+             xmlns:local="clr-namespace:XamarinApp.Services;assembly=XamarinApp"
+             xmlns:viewModels="clr-namespace:XamarinApp.ViewModels;assembly=XamarinApp"
+             BackgroundColor="#C8C8C8"
+             Title="{local:LanguageService FilterPageTitle}">
+    <ContentPage.BindingContext>
+        <viewModels:FilterViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20,0,20,0">
+                <StackLayout Orientation="Vertical">
+                    <Label Text="{local:LanguageService ProcessorGenerationLabel}"  HorizontalOptions="Center" FontFamily="{local:FontFamilyService}" FontSize="{local:FontSizeService}" TextColor="#9d182e" />
+                    <StackLayout Orientation="Horizontal">
+                        <Entry Text="{Binding ProcessorGenerationMin}"
+                           Placeholder="{local:LanguageService MinLabel}"
+                           PlaceholderColor="#606060" HeightRequest="40"
+                           FontFamily="{local:FontFamilyService}"
+                           FontSize="{local:FontSizeService}"
+                           HorizontalOptions="FillAndExpand"
+                           TextColor="#9d182e" />
+                        <Entry Text="{Binding ProcessorGenerationMax}" 
+                           Placeholder="{local:LanguageService MaxLabel}"
+                           PlaceholderColor="#606060" HeightRequest="40"
+                           FontFamily="{local:FontFamilyService}"
+                           FontSize="{local:FontSizeService}"
+                           HorizontalOptions="FillAndExpand"
+                           TextColor="#9d182e" />
+                    </StackLayout>
+                    <Label Text="{local:LanguageService ProcessorCoresLabel}"  HorizontalOptions="Center" FontFamily="{local:FontFamilyService}" FontSize="{local:FontSizeService}" TextColor="#9d182e" />
+                    <StackLayout Orientation="Horizontal">
+                        <Entry Text="{Binding ProcessorCoresMin}" 
+                           Placeholder="{local:LanguageService MinLabel}"
+                           PlaceholderColor="#606060" HeightRequest="40"
+                           FontFamily="{local:FontFamilyService}"
+                           FontSize="{local:FontSizeService}"
+                           HorizontalOptions="FillAndExpand"
+                           TextColor="#9d182e" />
+                        <Entry Text="{Binding ProcessorCoresMax}" 
+                           Placeholder="{local:LanguageService MaxLabel}"
+                           PlaceholderColor="#606060" HeightRequest="40"
+                           FontFamily="{local:FontFamilyService}"
+                           FontSize="{local:FontSizeService}"
+                           HorizontalOptions="FillAndExpand"
+                           TextColor="#9d182e" />
+                    </StackLayout>
+                    <Label Text="{local:LanguageService ProcessorThreadsLabel}"  HorizontalOptions="Center" FontFamily="{local:FontFamilyService}" FontSize="{local:FontSizeService}" TextColor="#9d182e" />
+                    <StackLayout Orientation="Horizontal">
+                        <Entry Text="{Binding ProcessorThreadsMin}" 
+                           Placeholder="{local:LanguageService MinLabel}"
+                           PlaceholderColor="#606060" HeightRequest="40"
+                           FontFamily="{local:FontFamilyService}"
+                           FontSize="{local:FontSizeService}"
+                           HorizontalOptions="FillAndExpand"
+                           TextColor="#9d182e" />
+                        <Entry Text="{Binding ProcessorThreadsMax}" 
+                           Placeholder="{local:LanguageService MaxLabel}"
+                           PlaceholderColor="#606060" HeightRequest="40"
+                           FontFamily="{local:FontFamilyService}"
+                           FontSize="{local:FontSizeService}"
+                           HorizontalOptions="FillAndExpand"
+                           TextColor="#9d182e" />
+                    </StackLayout>
+                    <Label Text="{local:LanguageService RamSizeLabel}"  HorizontalOptions="Center" FontFamily="{local:FontFamilyService}" FontSize="{local:FontSizeService}" TextColor="#9d182e" />
+                    <StackLayout Orientation="Horizontal">
+                        <Entry Text="{Binding RamSizeMin}" 
+                           Placeholder="{local:LanguageService MinLabel}"
+                           PlaceholderColor="#606060" HeightRequest="40"
+                           FontFamily="{local:FontFamilyService}"
+                           FontSize="{local:FontSizeService}"
+                           HorizontalOptions="FillAndExpand"
+                           TextColor="#9d182e" />
+                        <Entry Text="{Binding RamSizeMax}" 
+                           Placeholder="{local:LanguageService MaxLabel}"
+                           PlaceholderColor="#606060" HeightRequest="40"
+                           FontFamily="{local:FontFamilyService}"
+                           FontSize="{local:FontSizeService}"
+                           HorizontalOptions="FillAndExpand"
+                           TextColor="#9d182e" />
+                    </StackLayout>
+                    <Label Text="{local:LanguageService SsdSizeLabel}"  HorizontalOptions="Center" FontFamily="{local:FontFamilyService}" FontSize="{local:FontSizeService}" TextColor="#9d182e" />
+                    <StackLayout Orientation="Horizontal">
+                        <Entry Text="{Binding SsdSizeMin}" 
+                           Placeholder="{local:LanguageService MinLabel}"
+                           PlaceholderColor="#606060" HeightRequest="40"
+                           FontFamily="{local:FontFamilyService}"
+                           FontSize="{local:FontSizeService}"
+                           HorizontalOptions="FillAndExpand"
+                           TextColor="#9d182e" />
+                        <Entry Text="{Binding SsdSizeMax}" 
+                           Placeholder="{local:LanguageService MaxLabel}"
+                           PlaceholderColor="#606060" HeightRequest="40"
+                           FontFamily="{local:FontFamilyService}"
+                           FontSize="{local:FontSizeService}"
+                           HorizontalOptions="FillAndExpand"
+                           TextColor="#9d182e" />
+                    </StackLayout>
+                    <Label Text="{local:LanguageService HddSizeLabel}"  HorizontalOptions="Center" FontFamily="{local:FontFamilyService}" FontSize="{local:FontSizeService}" TextColor="#9d182e" />
+                    <StackLayout Orientation="Horizontal">
+                        <Entry Text="{Binding HddSizeMin}" 
+                           Placeholder="{local:LanguageService MinLabel}"
+                           PlaceholderColor="#606060" HeightRequest="40"
+                           FontFamily="{local:FontFamilyService}"
+                           FontSize="{local:FontSizeService}"
+                           HorizontalOptions="FillAndExpand"
+                           TextColor="#9d182e" />
+                        <Entry Text="{Binding HddSizeMax}" 
+                           Placeholder="{local:LanguageService MaxLabel}"
+                           PlaceholderColor="#606060" HeightRequest="40"
+                           FontFamily="{local:FontFamilyService}"
+                           FontSize="{local:FontSizeService}"
+                           HorizontalOptions="FillAndExpand"
+                           TextColor="#9d182e" />
+                    </StackLayout>
+                    <Label Text="{local:LanguageService PsuPowerLabel}"  HorizontalOptions="Center" FontFamily="{local:FontFamilyService}" FontSize="{local:FontSizeService}" TextColor="#9d182e" />
+                    <StackLayout Orientation="Horizontal">
+                        <Entry Text="{Binding PsuPowerMin}" 
+                           Placeholder="{local:LanguageService MinLabel}"
+                           PlaceholderColor="#606060" HeightRequest="40"
+                           FontFamily="{local:FontFamilyService}"
+                           FontSize="{local:FontSizeService}"
+                           HorizontalOptions="FillAndExpand"
+                           TextColor="#9d182e" />
+                        <Entry Text="{Binding PsuPowerMax}" 
+                           Placeholder="{local:LanguageService MaxLabel}"
+                           PlaceholderColor="#606060" HeightRequest="40"
+                           FontFamily="{local:FontFamilyService}"
+                           FontSize="{local:FontSizeService}"
+                           HorizontalOptions="FillAndExpand"
+                           TextColor="#9d182e" />
+                    </StackLayout>
+                    <Label Text="{local:LanguageService PriceLabel}"  HorizontalOptions="Center" FontFamily="{local:FontFamilyService}" FontSize="{local:FontSizeService}" TextColor="#9d182e" />
+                    <StackLayout Orientation="Horizontal">
+                        <Entry Text="{Binding PriceMin}" 
+                           Placeholder="{local:LanguageService MinLabel}"
+                           PlaceholderColor="#606060" HeightRequest="40"
+                           FontFamily="{local:FontFamilyService}"
+                           FontSize="{local:FontSizeService}"
+                           HorizontalOptions="FillAndExpand"
+                           TextColor="#9d182e" />
+                        <Entry Text="{Binding PriceMax}" 
+                           Placeholder="{local:LanguageService MaxLabel}"
+                           PlaceholderColor="#606060" HeightRequest="40"
+                           FontFamily="{local:FontFamilyService}"
+                           FontSize="{local:FontSizeService}"
+                           HorizontalOptions="FillAndExpand"
+                           TextColor="#9d182e" />
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" Spacing="10">
+                    <Button Text="{local:LanguageService FilterButton}" 
+                            Margin="0, 0, 0, 10"
+                            TextColor="#C8C8C8"
+                            HorizontalOptions="FillAndExpand"
+                            Command="{Binding Filter}"
+                            BackgroundColor="#9d182e" 
+                            CornerRadius="10" />
+                    <Button Text="{local:LanguageService ClearFilterButton}" 
+                            Margin="0, 0, 0, 10"
+                            TextColor="#C8C8C8"
+                            HorizontalOptions="FillAndExpand"
+                            Command="{Binding Clear}"
+                            BackgroundColor="#9d182e" 
+                            CornerRadius="10" />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

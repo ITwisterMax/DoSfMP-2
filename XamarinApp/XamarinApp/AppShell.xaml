@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:viewModels="clr-namespace:XamarinApp.ViewModels;assembly=XamarinApp"
+       xmlns:views="clr-namespace:XamarinApp.Views"
+       xmlns:local="clr-namespace:XamarinApp.Services;assembly=XamarinApp"
+       BackgroundColor="#C8C8C8"
+       Title="XamarinApplication"
+       x:Class="XamarinApp.AppShell">
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.ForegroundColor" Value="{StaticResource PrimaryDark}" />
+                <Setter Property="Shell.TitleColor" Value="{StaticResource PrimaryDark}" />
+                <Setter Property="Shell.DisabledColor" Value="{StaticResource PrimaryDark}" />
+                <Setter Property="Shell.UnselectedColor" Value="{StaticResource PrimaryDark}" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="{StaticResource PrimaryDark}"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="{StaticResource PrimaryDark}"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource PrimaryDark}"/>
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
+        </ResourceDictionary>
+    </Shell.Resources>
+    <Shell.BindingContext>
+        <viewModels:AppShellViewModel />
+    </Shell.BindingContext>
+    <Shell.FlyoutContentTemplate>
+        <DataTemplate>
+            <StackLayout BackgroundColor="#C8C8C8">
+                <ListView CachingStrategy="RecycleElement" IsVisible="{Binding IsHorizontal}" x:Name="ListOfItems" RowHeight="100" ItemsSource="{Binding Computers, Mode=TwoWay}" ItemTapped="OnItemClicked" SelectionMode="None" BackgroundColor="#C8C8C8">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <views:ListCell Image="{Binding Image.DownloadUrl, Mode=TwoWay}" Name="{Binding Name, Mode=TwoWay}" />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Button Text="{local:LanguageService LogOutButton}"
+                        Clicked="OnLogOutClicked" 
+                        TextColor="#C8C8C8"  
+                        HorizontalOptions="FillAndExpand"  
+                        BackgroundColor="#9d182e" 
+                        CornerRadius="10"
+                        Margin="0, 10, 0 ,0"/>
+            </StackLayout>
+        </DataTemplate>
+    </Shell.FlyoutContentTemplate>
+    <FlyoutItem FlyoutItemIsVisible="False">
+        <Tab IsVisible="{Binding IsHorizontal}" Title="{local:LanguageService HomeTab}" Icon="icon_home.png">
+            <ShellContent ContentTemplate="{DataTemplate views:HomePageHorizontal}" />
+        </Tab>
+        <Tab IsVisible="{Binding IsVertical}" Title="{local:LanguageService HomeTab}" Icon="icon_home.png">
+            <ShellContent ContentTemplate="{DataTemplate views:HomePage}" />
+        </Tab>
+        <Tab Title="{local:LanguageService FilterTab}" Icon="icon_filter.png" >
+            <ShellContent ContentTemplate="{DataTemplate views:FilterPage}" />
+        </Tab>
+        <Tab Title="{local:LanguageService SettingsTab}" Icon="icon_settings.png" >
+            <ShellContent ContentTemplate="{DataTemplate views:SettingsPage}" />
+        </Tab>
+    </FlyoutItem>
+</Shell>
