@@ -1,4 +1,4 @@
 # DoSfMP-2
-Development of software for mobile platforms (lab work 4, 5 and 6)
+Development of Software for Mobile Platforms (lab work 4, 5 and 6)
 
 Xamarin application + Firebase.
